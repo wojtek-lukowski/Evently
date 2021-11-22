@@ -1,7 +1,6 @@
----
 service: auth-server
 
-frameworkVersion: '2'
+# frameworkVersion: '2'
 
 provider:
   name: aws
@@ -9,13 +8,11 @@ provider:
   # lambdaHashingVersion: 20201221
   region: eu-central-1
   timeout: 60
-
-environment:
-  CLIENT_ID: ${file(config.json):CLIENT_ID}
-  CLIENT_SECRET: ${file(config.json):CLIENT_SECRET}
-  PROJECT_ID: ${file(config.json):PROJECT_ID}
-  CALENDAR_ID: ${file(config.json):CALENDAR_ID}
-
+  environment:
+    CLIENT_ID: ${file(config.json):CLIENT_ID}
+    CLIENT_SECRET: ${file(config.json):CLIENT_SECRET}
+    PROJECT_ID: ${file(config.json):PROJECT_ID}
+    CALENDAR_ID: ${file(config.json):CALENDAR_ID}
 functions:
   getAuthURL:
     handler: handler.getAuthURL
