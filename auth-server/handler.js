@@ -13,7 +13,7 @@ const credentials = {
   token_uri: "https://oauth2.googleapis.com/token",
   auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
   redirect_uris: ["https://wojtek-lukowski.github.io/evently/"],
-  javascript_origins: ["https://wojtek-lukowski.github.io", "https://localhost:3000"],
+  javascript_origins: ["https://wojtek-lukowski.github.io", "https://localhost:3000", "https://localhost:8080"],
 }; 
 const { client_secret, client_id, redirect_uris, calendar_id } = credentials;
 const oAuth2Client = new google.auth.OAuth2(
@@ -57,7 +57,7 @@ module.exports.getAccessToken = async (event) => {
       return resolve(token);
     });
   })
-  .then((token) => {
+  .then((token) => {    // Respond with OAuth token 
     return {
       statusCode: 200,
       headers: {
@@ -70,6 +70,9 @@ module.exports.getAccessToken = async (event) => {
     console.error(err);
     return {
       statusCode: 500,
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify(err),
     };
   });
@@ -102,7 +105,8 @@ module.exports.getCalendarEvents = async (event) => {
         resolve(response);
       }
     }
-  )
+  );
+  })
   .then((results) => {
     return {
       statusCode: 200,
@@ -116,8 +120,11 @@ module.exports.getCalendarEvents = async (event) => {
     console.error(err);
     return {
       statusCode: 500,
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify(err),
     };
   })
-  }
-};
+  };
+  
