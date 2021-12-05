@@ -1,16 +1,32 @@
 import React, { Component } from 'react';
-
 class Event extends Component {
-  
+  state = {
+    collapsed: true
+  }
+
+  expandEvent = (event) => {
+    const checkEvent = this.state.collapsed;
+    
+    if (checkEvent) {
+      this.setState({
+        collapsed: false
+      })
+    } else {
+      this.setState({
+        collapsed: true
+      })
+    }
+  };
+
   render() {
-    // const { event } = this.props;
+    const { event } = this.props;
 
     return (
       <div className="event">
-        <div className="event-time"></div>
-        <div className="event-name"></div>
-        <div className="event-location"></div>
-        <button className="button-show-details">Show details</button>
+        <div className="event-description">{event.description}</div>
+        <div className="event-time">{event.start}</div>
+        <div className="event-location">{event.location}</div>
+        <button className="button__show-details" onClick={() => this.expandEvent(event)}>Show details</button>
       </div>
     );
   }
