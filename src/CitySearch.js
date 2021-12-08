@@ -21,6 +21,7 @@ handleItemClicked = (suggestion) => {
   this.setState({
     query: suggestion
   });
+  this.props.updateEvents(suggestion);
 }
 
   render() {
