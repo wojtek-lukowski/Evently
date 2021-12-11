@@ -38,6 +38,7 @@ body {
 
 ul {
   list-style-type: none;
+  padding-left: 0;
 }
 
 .CitySearch {
@@ -139,18 +140,10 @@ button:hover {
   cursor: pointer;
 }
 
-.event-time {
-  /* position: relative; */
-}
-
-.event-time::before {
-  content: "";
-  /* background-image: url('./images/time.svg'); */
-  background-color: var(--text-color);
-  width: 4rem;
-  height: 4rem;
-  left: -40px;
-  top: 0
+.event svg {
+  position: relative;
+  top: 6px;
+  padding-right: 8px;
 }
 
 .event-description::first-line {
