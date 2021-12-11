@@ -25,8 +25,7 @@ class Event extends Component {
       <div className="event">
 
         <div className="event-description">{event.description}</div>
-        <p>Time placeholder</p>
-        {/* <div className="event-time">{event.start}</div> */}
+        <div className="event-time">{event.start.dateTime}</div>
         <div className="event-location">{event.location}</div>
         <button className="button__show-details" onClick={() => this.expandEvent(event)}>Show details</button>
       
