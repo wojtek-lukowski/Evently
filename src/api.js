@@ -6,6 +6,6 @@ export const extractLocations = (events) => {
   return locations;
 };
 
-export const getEvents = async => {
+export const getEvents = async () => {
   return mockData;
 };
