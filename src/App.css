@@ -15,13 +15,14 @@
   --green: #F19306;
   --text-color: #fff;
 
+  --font-family: Manrope;
 
   --border-radius: 3px;
 }
 
 html {
   font-size: 62.5%;
-  font-family: Manrope;
+  font-family: var(--font-family);
 }
 
 body {
