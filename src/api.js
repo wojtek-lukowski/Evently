@@ -19,7 +19,7 @@ const checkToken = async (accessToken) => {
 };
 
 const removeQuery = () => {
-  if (window.history.pishState && window.location.pathname) {
+  if (window.history.pushState && window.location.pathname) {
     var newurl = window.location.protocol +
     "//" +
     window.location.host +
