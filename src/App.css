@@ -131,6 +131,7 @@ button {
   font-size: 1.6rem;
   align-self: flex-end;
   margin-top: var(--gap2);
+  justify-self: flex-end;
 }
 
 button:hover {
