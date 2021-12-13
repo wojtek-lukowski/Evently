@@ -3,22 +3,13 @@ import './App.css';
 
 class NumberOfEvents extends Component {
 
-  state = {
-    numberOfEvents: 32
-  }
-
-  setNumber = (newNumber) => {
-    this.setState({
-      numberOfEvents: newNumber
-    })
-  }
-
   render() {
+    const { numberOfEvents, setNumber } = this.props;
 
     return (
       <div className="NumberOfEvents">
-        <p className="number-of-events">Show</p>
-      <input type="number" value={this.state.numberOfEvents} id="NumberOfEvents" onChange={(newNumber) => this.setNumber(newNumber)} />
+      <p className="number-of-events">Show</p>
+      <input type="number" min="5" max="50" step="5" value={this.props.numberOfEvents} id="NumberOfEvents" onChange={(e) => this.props.setNumber(e)} />
       <p className="number-of-events">events</p>
       </div>
     );

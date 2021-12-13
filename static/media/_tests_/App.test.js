@@ -24,16 +24,6 @@ describe('<App /> component' , () => {
   test('render NumberOfEvents', () => {
     expect(AppWrapper.find(NumberOfEvents)).toHaveLength(1);
   })
-
-  test('default number of events = 30', () => {
-    expect(AppWrapper.state('numberOfEvents')).toBe(30);
-  })
-
-  test('setNumber changes the state (number of events)', () => {
-    const newNumber = 10;
-    const newState = setNumber(newNumber);
-    expect(AppWrapper.state('numberOfEvents')).toBe(newState);
-  })
 });
 
 describe('<App /> integration', () => {
@@ -76,30 +66,5 @@ test('get list of all events when user selects "See all cities"', async () => {
   expect(AppWrapper.state('events')).toEqual(allEvents);
   AppWrapper.unmount();
 });
-
-test('App passes numberOfEvents as a prop to NumberOfEvents', () => {
-  const AppWrapper = mount(<App />);
-  const AppNumberOfEventsState = AppWrapper.state('numberOfEvents');
-  expect(AppNumberOfEventsState).not.toEqual(undefined);
-  expect(AppWrapper.find(NumberOfEvents).props().numberOfEvents).toEqual(AppNumberOfEventsState);
-  AppWrapper.unmount();
-})
-
-test('App passes setNumber as a prop to NumberOfEvents', () => {
-  const AppWrapper = mount(<App />);
-  const setNumber = AppWrapper.find('setNumber');
-  expect(setNumber).not.toEqual(undefined);
-  expect(AppWrapper.find(NumberOfEvents).props().setNumber).toEqual(setNumber());
-  AppWrapper.unmount();
-})
-
-  test('user can change the number of displayed events', () => {
-    const AppWrapper = mount(<App />);
-    const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
-    const newNumber = 10;
-    NumberOfEventsWrapper.find('#NumberOfEvents').simulate('change', newNumber);
-    expect(AppWrapper.state('numberOfEvents')).toBe(10);
-    AppWrapper.unmount();
-  })
 
 });
