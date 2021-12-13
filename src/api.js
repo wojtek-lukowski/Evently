@@ -27,7 +27,7 @@ const removeQuery = () => {
     window.history.pushState("", "", newurl);
   } else {
     newurl = window.location.protocol + "//" + window.locations.host;
-    window.history.pishState("", "", newurl);
+    window.history.pushState("", "", newurl);
   }
 };
 
