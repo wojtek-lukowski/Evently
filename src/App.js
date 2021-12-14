@@ -38,17 +38,18 @@ class App extends Component {
     });
   }
 
-  
+
   setNumber = (e) => {
-    const newNumber = e.target.value
-    // ? parseInt(e.target.value) : 30;
+    const newNumber = parseInt(e.target.value);
     this.setState({
       numberOfEvents: newNumber
     })
-    console.log(this.state);
+    console.log('target value', e.target.value);
   }
 
   render() {
+    console.log(this.state);
+
     return (
       <div className="App">
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
