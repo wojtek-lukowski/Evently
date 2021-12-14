@@ -29,6 +29,7 @@ describe('<App /> component' , () => {
     expect(AppWrapper.state('numberOfEvents')).toBe(30);
   })
 
+  //fails
   test('setNumber changes the state (number of events)', () => {
     const newNumber = 10;
     const newState = setNumber(newNumber);
@@ -85,14 +86,16 @@ test('App passes numberOfEvents as a prop to NumberOfEvents', () => {
   AppWrapper.unmount();
 })
 
+//fails
 test('App passes setNumber as a prop to NumberOfEvents', () => {
   const AppWrapper = mount(<App />);
   const setNumber = AppWrapper.find('setNumber');
   expect(setNumber).not.toEqual(undefined);
-  expect(AppWrapper.find(NumberOfEvents).props().setNumber).toEqual(setNumber());
+  expect(AppWrapper.find(NumberOfEvents).props().setNumber()).toEqual(setNumber());
   AppWrapper.unmount();
 })
 
+//fails
   test('user can change the number of displayed events', () => {
     const AppWrapper = mount(<App />);
     const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);

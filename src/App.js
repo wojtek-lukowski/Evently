@@ -38,6 +38,7 @@ class App extends Component {
     });
   }
 
+  
   setNumber = (e) => {
     const newNumber = e.target.value
     // ? parseInt(e.target.value) : 30;
