@@ -112,7 +112,7 @@ align-self: center;
 .event {
   display: flex;
   flex-direction: column;
-  height: 90%;
+  /* height: 90%; */
   width: 30rem;
   gap: var(--gap2);
   padding: var(--gap3);
@@ -148,6 +148,6 @@ button:hover {
   padding-right: 8px;
 }
 
-.event-description::first-line {
-font-weight: bold;
+.event-description {
+line-height: 120%;
 }
