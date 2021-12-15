@@ -6,7 +6,6 @@ import CitySearch from '../CitySearch';
 import NumberOfEvents from '../NumberOfEvents';
 import { extractLocations, getEvents } from '../api';
 import { mockData } from '../mock-data';
-import { setNumber } from '../App';
 
 describe('<App /> component' , () => {
   let AppWrapper;
@@ -30,12 +29,6 @@ describe('<App /> component' , () => {
     expect(AppWrapper.state('numberOfEvents')).toBe(30);
   })
 
-  //fails
-  // test('setNumber changes the state (number of events)', () => {
-  //   const newNumber = 10;
-  //   const newState = AppWrapper.setNumber(newNumber);
-  //   expect(AppWrapper.state('numberOfEvents')).toBe(newState);
-  // })
 });
 
 describe('<App /> integration', () => {
@@ -87,16 +80,6 @@ test('App passes numberOfEvents as a prop to NumberOfEvents', () => {
   AppWrapper.unmount();
 })
 
-//fails
-// test('App passes setNumber as a prop to NumberOfEvents', () => {
-//   const AppWrapper = mount(<App />);
-//   const setNumber = AppWrapper.find('setNumber');
-//   expect(setNumber).not.toEqual(undefined);
-//   expect(AppWrapper.find(NumberOfEvents).props().setNumber()).toEqual(setNumber());
-//   AppWrapper.unmount();
-// })
-
-//fails
   test('user can change the number of displayed events', async () => {
     const AppWrapper = mount(<App />);
     const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);

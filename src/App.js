@@ -11,14 +11,18 @@ class App extends Component {
   state = {
     events: [],
     locations: [],
-    numberOfEvents: 30
+    numberOfEvents: 30,
+    currentLocation: 'all'
   }
 
-  componentDidMount() {
+  async componentDidMount() {
+    const { numberOfEvents } = this.state;
     this.mounted = true;
     getEvents().then((events) => {
       if (this.mounted) {
-        this.setState({ events, locations: extractLocations(events) });
+        this.setState({
+          events: events.slice(0, numberOfEvents),
+          locations: extractLocations(events) });
       }
     });
   }
@@ -37,13 +41,14 @@ class App extends Component {
       });
     });
   }
-
-
+  
+  
   setNumber = (e) => {
     const newNumber = parseInt(e.target.value);
     this.setState({
       numberOfEvents: newNumber
     })
+    this.updateEvents(this.state.currentLocation, this.state.numberOfEvents);
     console.log('target value', e.target.value);
   }
 
