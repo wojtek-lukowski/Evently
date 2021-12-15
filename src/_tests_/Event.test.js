@@ -14,8 +14,8 @@ test('renders event card', () => {
   expect(EventWrapper.find('.event')).toHaveLength(1);
 });
 
-test('event card renders event description/title', () => {
-  expect(EventWrapper.find('.event-description')).toHaveLength(1);
+test('event card renders event summary/title', () => {
+  expect(EventWrapper.find('.event-summary')).toHaveLength(1);
   });
 
 test('event card renders time', () => {

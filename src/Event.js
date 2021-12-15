@@ -25,6 +25,7 @@ class Event extends Component {
 
     return (
       <div className="event">
+        
         <div className="event-summary">
           <h3>{event.summary}</h3></div>
         <div className="event-time">
@@ -42,7 +43,8 @@ class Event extends Component {
         <button className="button__show-details" onClick={() => this.expandEvent(event)}>{collapsed ? "Show details" : "Hide details"}</button>
         
         {!collapsed &&
-            <div className={`event-details ${this.state.collapsed ? "hide" : "show"}`}>
+            // <div className={`event-details ${this.state.collapsed ? "hide" : "show"}`}>
+            <div className="event-details">
               <div className="event-description">{event.description}</div>
             </div>
           }
