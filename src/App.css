@@ -46,6 +46,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 input {
@@ -63,22 +64,29 @@ input:focus {
 }
 
 .suggestions {
-align-self: center;
+  position: absolute;
+  top: 2.8rem;
+  background-color: white;
+  align-self: center;
+  margin-top: 0;
+}
+
+.suggestions {
+  width: 30%;
+  border: 1px solid var(--purple-dark);
 }
 
 .suggestions li {
-  display: inline-block;
-  border: 1px solid var(--purple-dark);
-  background-color: var(--purple-dark);
-  color: var(--text-color);
+  display: block;
+  background-color: var(--text-color);
+  color: var(--purple-dark);
   padding: var(--gap);
-  margin: var(--gap);
+  /* margin: var(--gap); */
 }
 
 .suggestions li:hover {
-  border: 1px solid var(--purple-dark);
-  background-color: var(--text-color);
-  color: var(--purple-dark);
+  background-color: var(--purple-dark);
+  color: var(--text-color);
   cursor: pointer;
   transition: 0.2s;
 }
