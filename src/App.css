@@ -163,3 +163,5 @@ button:hover {
 .event-description {
 line-height: 120%;
 }
+
+@import './nprogress.css';
