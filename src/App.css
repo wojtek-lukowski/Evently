@@ -52,7 +52,7 @@ ul {
 }
 
 input {
-  width: 30%;
+  width: 30rem;
   height: var(--gap3);
   margin: auto;
   border: 1px solid var(--purple-dark);
@@ -75,7 +75,8 @@ input:active {
 }
 
 .suggestions {
-  width: 30%;
+  width: 30rem;
+  padding-bottom: var(--gap2);
   border: 1px solid var(--purple-dark);
   box-shadow: 2px 5px 10px var(--white-opaque);
 }
@@ -96,14 +97,16 @@ input:active {
 }
 
 .NumberOfEvents {
-  text-align: right;
-  margin-right: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--gap3);
 }
 
 .number-of-events {
   display: inline-block;
   color: var(--purple-dark);
-  margin-top: 0;
+  margin: 0;
 }
 
 #NumberOfEvents {
