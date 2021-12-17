@@ -58,7 +58,7 @@ export const getEvents = async () => {
 
   if (token) {
     removeQuery();
-    const url = 'https://0tq0fabzz1.execute-api.eu-central-1.amazonaws.com/dev/api/get-events' + '/' + token;
+    const url = `https://0tq0fabzz1.execute-api.us-east-1.amazonaws.com/dev/api/get-calendar-events/${token}`;
     const result = await axios.get(url);
       if (result.data) {
         var locations = extractLocations(result.data.events);
