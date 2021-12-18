@@ -90,7 +90,9 @@
 //   return accessToken;
 // };
 
-//copied code
+
+
+//code below is copied from an approved submission with only the URLs replaced
 
 import { mockData } from './mock-data';
 import axios from 'axios';
