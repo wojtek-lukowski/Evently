@@ -32,7 +32,7 @@ module.exports.getAuthURL = async () => {
   return {
     statusCode: 200,
     headers: {
-      'Access-Control-Allow-Origin': '*'
+      "Access-Control-Allow-Origin": "*",
     },
     body: JSON.stringify({
       authUrl: authUrl,
@@ -42,7 +42,7 @@ module.exports.getAuthURL = async () => {
 
 // get token
 module.exports.getAccessToken = async (event) => {
-  const oAuth2Client = new google.auth.Auth2(
+  const oAuth2Client = new google.auth.OAuth2(
     client_id,
     client_secret,
     redirect_uris[0]
@@ -57,28 +57,21 @@ module.exports.getAccessToken = async (event) => {
       return resolve(token);
     });
   })
-  .then((token) => {    // Respond with OAuth token 
-    return {
-      statusCode: 200,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Credentials": true,
-          "Access-Control-Allow-Headers" : "Content-Type",
-          "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
-      },
-      body: JSON.stringify(token),
-    };
-  })
-  .catch((err) => {
-    console.error(err);
-    return {
-      statusCode: 500,
-      headers: {
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify(err),
-    };
-  });
+    .then((token) => {
+      // Respond with OAuth token 
+      return {
+        statusCode: 200,
+        body: JSON.stringify(token),
+      };
+    })
+    .catch((err) => {
+      // Handle error
+      console.error(err);
+      return {
+        statusCode: 500,
+        body: JSON.stringify(err),
+      };
+    });
 };
 
 //get events
