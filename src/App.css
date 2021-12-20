@@ -16,6 +16,7 @@
   --green: #F19306;
   --text-color: #fff;
   --white-opaque: #ffffff80;
+  --error:  #ff0033;
 
   --font-family: Manrope;
 
@@ -172,9 +173,11 @@ line-height: 120%;
   top: 0;
   left: 50%;
   transform: translate(-50%);
-  display: flex;
+  width: 90%;
+  text-align: center;
+  /* display: flex;
   flex-wrap: nowrap;
-  align-items: center;
+  align-items: center; */
 }
 
 .Alert p {
