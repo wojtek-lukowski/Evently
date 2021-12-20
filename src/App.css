@@ -167,4 +167,23 @@ button:hover {
 line-height: 120%;
 }
 
+.Alert {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.Alert p {
+  display: inline-block;
+  padding-left: var(--gap);
+}
+
+.Alert svg {
+  width: 2.4rem;
+}
+
 @import './nprogress.css';
