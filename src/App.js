@@ -49,11 +49,9 @@ class App extends Component {
       numberOfEvents: newNumber
     })
     this.updateEvents(this.state.currentLocation, this.state.numberOfEvents);
-    console.log('target value', e.target.value);
   }
 
   render() {
-    console.log(this.state);
 
     return (
       <div className="App">
