@@ -5,6 +5,7 @@ import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import { extractLocations, getEvents } from './api';
+import { WarningAlert } from './Alert';
 
 class App extends Component {
 
@@ -52,9 +53,14 @@ class App extends Component {
   }
 
   render() {
+    const warningText='No events found'
+    const events = this.state;
 
     return (
       <div className="App">
+        {!events &&
+        <WarningAlert text={warningText}/>
+        }
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
         <NumberOfEvents numberOfEvents={this.state.numberOfEvents} setNumber={this.setNumber}/>
         <EventList events={this.state.events}/>
