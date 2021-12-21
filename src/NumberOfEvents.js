@@ -14,7 +14,7 @@ class NumberOfEvents extends Component {
           <ErrorAlert text={errorText}/>
       }
       <p className="number-of-events">Show</p>
-      <input type="number" min="5" max="50" step="5"
+      <input type="number" min="5" max="100" step="5"
       value={numberOfEvents} id="NumberOfEvents" onChange={(e) => setNumber(e)} 
       />
       <p className="number-of-events">events</p>

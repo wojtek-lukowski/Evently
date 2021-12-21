@@ -173,20 +173,22 @@ line-height: 120%;
   top: 0;
   left: 50%;
   transform: translate(-50%);
-  width: 90%;
-  text-align: center;
-  /* display: flex;
+  /* width: 90%;
+  text-align: center; */
+  display: flex;
   flex-wrap: nowrap;
-  align-items: center; */
+  align-items: center;
 }
 
 .Alert p {
   display: inline-block;
-  padding-left: var(--gap);
+  /* padding-left: var(--gap); */
+  text-align: center;
 }
 
-.Alert svg {
+/* .Alert svg {
   width: 2.4rem;
-}
+  height: 2.4rem;
+} */
 
 @import './nprogress.css';

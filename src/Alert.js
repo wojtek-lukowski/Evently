@@ -9,12 +9,12 @@ class Alert extends Component {
   getStyle = () => {
     return {
       color: this.color,
-      text: this.text
+      text: this.text,
     };
   }
 
    render() {
-    //  const text = this.props;
+     const text = this.props;
       return (
         <div className="Alert">
         {/* {text && 
