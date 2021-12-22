@@ -70,12 +70,6 @@ input {
   color: var(--purple-dark);
 }
 
-@media (max-width: 434px) {
-  input {
-    width: 100%;
-  }
-}
-
 input:focus,
 input:active {
   background-color: var(--purple-dark);
