@@ -32,12 +32,22 @@ body {
   font-size: 1.6rem;
 }
 
+div {
+  box-sizing: border-box;
+}
+
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: var(--gap8);
   margin: auto;
+}
+
+@media (max-width: 500px) {
+  .App {
+    padding-top: var(--gap4);
+  }
 }
 
 ul {
@@ -47,7 +57,6 @@ ul {
 
 .CitySearch {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   position: relative;
 }
@@ -59,6 +68,12 @@ input {
   border: 1px solid var(--purple-dark);
   border-radius: var(--border-radius);
   color: var(--purple-dark);
+}
+
+@media (max-width: 434px) {
+  input {
+    width: 100%;
+  }
 }
 
 input:focus,
@@ -128,7 +143,6 @@ input:active {
 .event {
   display: flex;
   flex-direction: column;
-  /* height: 90%; */
   width: 30rem;
   gap: var(--gap2);
   padding: var(--gap3);
@@ -138,7 +152,7 @@ input:active {
 }
 
 button {
-  width: 50%;
+  width: 15rem;
   padding: var(--gap) var(--gap3);
   border-radius: var(--border-radius);
   background-color: var(--purple-dark);
@@ -173,11 +187,10 @@ line-height: 120%;
   top: 0;
   left: 50%;
   transform: translate(-50%);
-  /* width: 90%;
-  text-align: center; */
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
+  background-color: var(--text-color);
 }
 
 .Alert p {
