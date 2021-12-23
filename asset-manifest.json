@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/evently/static/css/main.d88521a4.chunk.css",
-    "main.js": "/evently/static/js/main.f2f317c6.chunk.js",
-    "main.js.map": "/evently/static/js/main.f2f317c6.chunk.js.map",
+    "main.css": "/evently/static/css/main.fad8870a.chunk.css",
+    "main.js": "/evently/static/js/main.099ea56b.chunk.js",
+    "main.js.map": "/evently/static/js/main.099ea56b.chunk.js.map",
     "runtime-main.js": "/evently/static/js/runtime-main.ae38f861.js",
     "runtime-main.js.map": "/evently/static/js/runtime-main.ae38f861.js.map",
     "static/js/2.d1151086.chunk.js": "/evently/static/js/2.d1151086.chunk.js",
@@ -12,13 +12,13 @@
     "index.html": "/evently/index.html",
     "service-worker.js": "/evently/service-worker.js",
     "service-worker.js.map": "/evently/service-worker.js.map",
-    "static/css/main.d88521a4.chunk.css.map": "/evently/static/css/main.d88521a4.chunk.css.map",
+    "static/css/main.fad8870a.chunk.css.map": "/evently/static/css/main.fad8870a.chunk.css.map",
     "static/js/2.d1151086.chunk.js.LICENSE.txt": "/evently/static/js/2.d1151086.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ae38f861.js",
     "static/js/2.d1151086.chunk.js",
-    "static/css/main.d88521a4.chunk.css",
-    "static/js/main.f2f317c6.chunk.js"
+    "static/css/main.fad8870a.chunk.css",
+    "static/js/main.099ea56b.chunk.js"
   ]
 }
