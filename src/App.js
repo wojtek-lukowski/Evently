@@ -44,7 +44,6 @@ class App extends Component {
     });
   }
   
-  
   setNumber = (e) => {
     const newNumber = parseInt(e.target.value);
     this.setState({
@@ -54,14 +53,10 @@ class App extends Component {
   }
 
   render() {
-    const warningText='No events found'
-    const events = this.state;
 
     return (
       <div className="App">
-        {!events &&
-        <WarningAlert text={warningText}/>
-        }
+         { !navigator.onLine ? (<WarningAlert text='You are offline. The events may not be updated.' />) : (<WarningAlert text=' ' />)}
         <Header />
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
         <NumberOfEvents numberOfEvents={this.state.numberOfEvents} setNumber={this.setNumber}/>
