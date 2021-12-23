@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-// import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import * as serviceWorker from "./serviceWorkerRegistration";
 // import * as serviceWorker from "./service-worker";
 import reportWebVitals from './reportWebVitals';
@@ -24,6 +24,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // Learn more about service workers: https://cra.link/PWA
 // serviceWorkerRegistration.unregister();
 serviceWorker.register();
+serviceWorkerRegistration.register();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
