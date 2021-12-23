@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/evently/static/css/main.7a79411e.chunk.css",
+    "main.css": "/evently/static/css/main.bb9cac1c.chunk.css",
     "main.js": "/evently/static/js/main.0797fd88.chunk.js",
     "main.js.map": "/evently/static/js/main.0797fd88.chunk.js.map",
     "runtime-main.js": "/evently/static/js/runtime-main.ae38f861.js",
@@ -12,13 +12,13 @@
     "index.html": "/evently/index.html",
     "service-worker.js": "/evently/service-worker.js",
     "service-worker.js.map": "/evently/service-worker.js.map",
-    "static/css/main.7a79411e.chunk.css.map": "/evently/static/css/main.7a79411e.chunk.css.map",
+    "static/css/main.bb9cac1c.chunk.css.map": "/evently/static/css/main.bb9cac1c.chunk.css.map",
     "static/js/2.a6be3e6f.chunk.js.LICENSE.txt": "/evently/static/js/2.a6be3e6f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ae38f861.js",
     "static/js/2.a6be3e6f.chunk.js",
-    "static/css/main.7a79411e.chunk.css",
+    "static/css/main.bb9cac1c.chunk.css",
     "static/js/main.0797fd88.chunk.js"
   ]
 }
