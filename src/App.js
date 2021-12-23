@@ -6,6 +6,7 @@ import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import { extractLocations, getEvents } from './api';
 import { WarningAlert } from './Alert';
+import Header from './Header';
 
 class App extends Component {
 
@@ -61,6 +62,7 @@ class App extends Component {
         {!events &&
         <WarningAlert text={warningText}/>
         }
+        <Header />
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
         <NumberOfEvents numberOfEvents={this.state.numberOfEvents} setNumber={this.setNumber}/>
         <EventList events={this.state.events}/>

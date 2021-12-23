@@ -45,6 +45,7 @@ handleItemClicked = (suggestion) => {
         <input
         type="text"
         className="city"
+        placeholder="Enter a city"
         value={this.state.query}
         onFocus={() => this.setState({ showSuggestions: true })}
         onChange={this.handleInputChanged} />

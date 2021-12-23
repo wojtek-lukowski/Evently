@@ -40,13 +40,32 @@ div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: var(--gap8);
   margin: auto;
 }
 
+.Header {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 10rem;
+  background-color: var(--purple-dark);
+  padding: var(--gap) 10%;
+  margin-bottom: var(--gap5);
+}
+
+.Header svg {
+  width: 3rem;
+  height: auto;
+  align-self: center;
+}
+
 @media (max-width: 500px) {
-  .App {
-    padding-top: var(--gap4);
+  .Header {
+    height: 5rem;
+    margin-bottom: var(--gap5);
+  }
+  .Header svg {
+    width: 2rem;
   }
 }
 
@@ -178,24 +197,27 @@ line-height: 120%;
 
 .Alert {
   position: fixed;
-  top: 0;
+  top: 10rem;
   left: 50%;
   transform: translate(-50%);
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  background-color: var(--text-color);
+  font-size: 1.4rem;
+}
+
+@media (max-width: 500px) {
+  .Alert {
+    top: 4rem;
+    left: var(--gap);
+    padding-right: var(--gap);
+    transform: translate(0%);
+  }
 }
 
 .Alert p {
   display: inline-block;
-  /* padding-left: var(--gap); */
   text-align: center;
 }
-
-/* .Alert svg {
-  width: 2.4rem;
-  height: 2.4rem;
-} */
 
 @import './nprogress.css';
