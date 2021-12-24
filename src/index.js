@@ -23,7 +23,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://cra.link/PWA
 // serviceWorkerRegistration.unregister();
-serviceWorker.register();
+// serviceWorker.register();
 serviceWorkerRegistration.register();
 
 // If you want to start measuring performance in your app, pass a function
