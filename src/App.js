@@ -7,6 +7,8 @@ import NumberOfEvents from './NumberOfEvents';
 import { extractLocations, getEvents } from './api';
 import { WarningAlert } from './Alert';
 import Header from './Header';
+import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
+
 
 class App extends Component {
 
@@ -52,6 +54,16 @@ class App extends Component {
     this.updateEvents(this.state.currentLocation, this.state.numberOfEvents);
   }
 
+  getData = () => {
+    const { locations, events } = this.state;
+    const data = locations.map((location) => {
+      const number = events.filter((event) => event.location === location).length
+      const city = location.split(', ').shift()
+      return { city, number };
+    })
+    return data;
+  }
+
   render() {
 
     return (
@@ -60,6 +72,14 @@ class App extends Component {
         <Header />
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
         <NumberOfEvents numberOfEvents={this.state.numberOfEvents} setNumber={this.setNumber}/>
+        <ScatterChart width={730} height={250}
+          margin={{ top: 20, right: 20, bottom: 10, left: 10 }}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="city" name="city" type="category" />
+          <YAxis dataKey="number" name="number of events" type="number" allowDecimals={false} />
+          <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+          <Scatter data={this.getData()} fill="var(--purple-dark)" />
+        </ScatterChart>
         <EventList events={this.state.events}/>
       </div>
     );
