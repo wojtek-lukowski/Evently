@@ -7,7 +7,8 @@ import NumberOfEvents from './NumberOfEvents';
 import { extractLocations, getEvents } from './api';
 import { WarningAlert } from './Alert';
 import Header from './Header';
-import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
+import EventGenre from './EventGenre';
+import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 
 class App extends Component {
@@ -72,7 +73,10 @@ class App extends Component {
         <Header />
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
         <NumberOfEvents numberOfEvents={this.state.numberOfEvents} setNumber={this.setNumber}/>
-        <ScatterChart width={730} height={250}
+       <div className="data-vis-wrapper">
+         <EventGenre events={this.state.events} />
+        <ResponsiveContainer height={400}>
+        <ScatterChart width={800} height={250}
           margin={{ top: 20, right: 20, bottom: 10, left: 10 }}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="city" name="city" type="category" />
@@ -80,6 +84,8 @@ class App extends Component {
           <Tooltip cursor={{ strokeDasharray: '3 3' }} />
           <Scatter data={this.getData()} fill="var(--purple-dark)" />
         </ScatterChart>
+            </ResponsiveContainer>
+        </div>
         <EventList events={this.state.events}/>
       </div>
     );
