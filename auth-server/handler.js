@@ -42,11 +42,11 @@ module.exports.getAuthURL = async () => {
 
 // get token
 module.exports.getAccessToken = async (event) => {
-  const oAuth2Client = new google.auth.OAuth2(
-    client_id,
-    client_secret,
-    redirect_uris[0]
-  );
+  // const oAuth2Client = new google.auth.OAuth2(
+  //   client_id,
+  //   client_secret,
+  //   redirect_uris[0]
+  // );
   const code = decodeURIComponent(`${event.pathParameters.code}`);
 
   return new Promise((resolve, reject) => {
