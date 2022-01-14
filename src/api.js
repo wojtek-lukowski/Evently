@@ -84,6 +84,7 @@ export const getEvents = async () => {
 };
 
 export const getAccessToken = async () => {
+  console.log('getting token2');
   const accessToken = localStorage.getItem('access_token');
   const tokenCheck = accessToken && (await checkToken(accessToken));
 

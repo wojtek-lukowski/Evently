@@ -192,7 +192,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/auth-server/dev/1642155718268-2022-01-14T10:21:58.268Z/auth-server.zip"
+                "S3Key": "serverless/auth-server/dev/1642169075174-2022-01-14T14:04:35.174Z/auth-server.zip"
               },
               "Handler": "handler.getAuthURL",
               "Runtime": "nodejs12.x",
@@ -225,7 +225,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/auth-server/dev/1642155718268-2022-01-14T10:21:58.268Z/auth-server.zip"
+                "S3Key": "serverless/auth-server/dev/1642169075174-2022-01-14T14:04:35.174Z/auth-server.zip"
               },
               "Handler": "handler.getAccessToken",
               "Runtime": "nodejs12.x",
@@ -258,7 +258,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/auth-server/dev/1642155718268-2022-01-14T10:21:58.268Z/auth-server.zip"
+                "S3Key": "serverless/auth-server/dev/1642169075174-2022-01-14T14:04:35.174Z/auth-server.zip"
               },
               "Handler": "handler.getCalendarEvents",
               "Runtime": "nodejs12.x",
@@ -284,34 +284,34 @@
               "GetCalendarEventsLogGroup"
             ]
           },
-          "GetAccessTokenLambdaVersiongmSg0GzQivabv19h3jSEDkxPGF6kAkjCAmx4jKLkEgY": {
-            "Type": "AWS::Lambda::Version",
-            "DeletionPolicy": "Retain",
-            "Properties": {
-              "FunctionName": {
-                "Ref": "GetAccessTokenLambdaFunction"
-              },
-              "CodeSha256": "X4N1ELGqV8d/IR1iHIj/NhE/yo8rHlkDdcFB83iAeCo="
-            }
-          },
-          "GetAuthURLLambdaVersionbwaSOFwIODBHfEfS3RF4KpOCfzRmprTWXheT2Ezbc": {
+          "GetAuthURLLambdaVersionhG4XH8LQMTbA6pLjvsNZB3DBwaJDIDDvJobrXVVZk": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetAuthURLLambdaFunction"
               },
-              "CodeSha256": "X4N1ELGqV8d/IR1iHIj/NhE/yo8rHlkDdcFB83iAeCo="
+              "CodeSha256": "NsR8vRUhZU0MdIGlqAoSFdznC00EvBEXr+MEWWJ6tEI="
             }
           },
-          "GetCalendarEventsLambdaVersion1VRFN9hj27zRpwCYXtghMWiJQabwM1CT6a1VAAzfyg": {
+          "GetCalendarEventsLambdaVersionXjCZ5ovB3SGzh7PQjyQ2cTo0Ov1tg91f4yxqyfyFPE": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetCalendarEventsLambdaFunction"
               },
-              "CodeSha256": "X4N1ELGqV8d/IR1iHIj/NhE/yo8rHlkDdcFB83iAeCo="
+              "CodeSha256": "NsR8vRUhZU0MdIGlqAoSFdznC00EvBEXr+MEWWJ6tEI="
+            }
+          },
+          "GetAccessTokenLambdaVersionhLnfo2a8h1u2nUcfMqJI6w9WJCxxiLDajl7LwqML9I": {
+            "Type": "AWS::Lambda::Version",
+            "DeletionPolicy": "Retain",
+            "Properties": {
+              "FunctionName": {
+                "Ref": "GetAccessTokenLambdaFunction"
+              },
+              "CodeSha256": "NsR8vRUhZU0MdIGlqAoSFdznC00EvBEXr+MEWWJ6tEI="
             }
           },
           "ApiGatewayRestApi": {
@@ -674,7 +674,7 @@
               "GetCalendarEventsLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1642155712908": {
+          "ApiGatewayDeployment1642169069722": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -812,19 +812,10 @@
               "Name": "sls-auth-server-dev-ServerlessDeploymentBucketName"
             }
           },
-          "GetAccessTokenLambdaFunctionQualifiedArn": {
-            "Description": "Current Lambda function version",
-            "Value": {
-              "Ref": "GetAccessTokenLambdaVersiongmSg0GzQivabv19h3jSEDkxPGF6kAkjCAmx4jKLkEgY"
-            },
-            "Export": {
-              "Name": "sls-auth-server-dev-GetAccessTokenLambdaFunctionQualifiedArn"
-            }
-          },
           "GetAuthURLLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetAuthURLLambdaVersionbwaSOFwIODBHfEfS3RF4KpOCfzRmprTWXheT2Ezbc"
+              "Ref": "GetAuthURLLambdaVersionhG4XH8LQMTbA6pLjvsNZB3DBwaJDIDDvJobrXVVZk"
             },
             "Export": {
               "Name": "sls-auth-server-dev-GetAuthURLLambdaFunctionQualifiedArn"
@@ -833,10 +824,19 @@
           "GetCalendarEventsLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetCalendarEventsLambdaVersion1VRFN9hj27zRpwCYXtghMWiJQabwM1CT6a1VAAzfyg"
+              "Ref": "GetCalendarEventsLambdaVersionXjCZ5ovB3SGzh7PQjyQ2cTo0Ov1tg91f4yxqyfyFPE"
             },
             "Export": {
               "Name": "sls-auth-server-dev-GetCalendarEventsLambdaFunctionQualifiedArn"
+            }
+          },
+          "GetAccessTokenLambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Ref": "GetAccessTokenLambdaVersionhLnfo2a8h1u2nUcfMqJI6w9WJCxxiLDajl7LwqML9I"
+            },
+            "Export": {
+              "Name": "sls-auth-server-dev-GetAccessTokenLambdaFunctionQualifiedArn"
             }
           },
           "ServiceEndpoint": {
@@ -986,7 +986,7 @@
         "timeout": 60,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "GetAuthURLLambdaVersionbwaSOFwIODBHfEfS3RF4KpOCfzRmprTWXheT2Ezbc"
+        "versionLogicalId": "GetAuthURLLambdaVersionhG4XH8LQMTbA6pLjvsNZB3DBwaJDIDDvJobrXVVZk"
       },
       "getAccessToken": {
         "handler": "handler.getAccessToken",
@@ -1021,7 +1021,7 @@
         "timeout": 60,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "GetAccessTokenLambdaVersiongmSg0GzQivabv19h3jSEDkxPGF6kAkjCAmx4jKLkEgY"
+        "versionLogicalId": "GetAccessTokenLambdaVersionhLnfo2a8h1u2nUcfMqJI6w9WJCxxiLDajl7LwqML9I"
       },
       "getCalendarEvents": {
         "handler": "handler.getCalendarEvents",
@@ -1056,7 +1056,7 @@
         "timeout": 60,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "GetCalendarEventsLambdaVersion1VRFN9hj27zRpwCYXtghMWiJQabwM1CT6a1VAAzfyg"
+        "versionLogicalId": "GetCalendarEventsLambdaVersionXjCZ5ovB3SGzh7PQjyQ2cTo0Ov1tg91f4yxqyfyFPE"
       }
     },
     "configValidationMode": "warn",
@@ -1077,7 +1077,7 @@
     "artifact": "/Users/wojtek_lukowski/Desktop/Development/evently-2/auth-server/.serverless/auth-server.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/auth-server/dev/1642155718268-2022-01-14T10:21:58.268Z",
+    "artifactDirectoryName": "serverless/auth-server/dev/1642169075174-2022-01-14T14:04:35.174Z",
     "artifact": "auth-server.zip"
   }
 }
