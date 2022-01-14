@@ -24,6 +24,7 @@ const oAuth2Client = new google.auth.OAuth2(
 
 //get auth URL
 module.exports.getAuthURL = async () => {
+  console.log('getting url');
   const authUrl = oAuth2Client.generateAuthUrl({
     access_type: "offline",
     scope: SCOPES,
@@ -42,6 +43,7 @@ module.exports.getAuthURL = async () => {
 
 // get token
 module.exports.getAccessToken = async (event) => {
+  console.log('getting token');
   const oAuth2Client = new google.auth.OAuth2(
     client_id,
     client_secret,
@@ -54,6 +56,7 @@ module.exports.getAccessToken = async (event) => {
       if (err) {
         return reject(err);
       }
+      console.log('token', token);
       return resolve(token);
     });
   })
@@ -82,6 +85,7 @@ module.exports.getAccessToken = async (event) => {
 
 //get events
 module.exports.getCalendarEvents = async (event) => {
+  console.log('getting events');
   const oAuth2Client = new google.auth.OAuth2(
     client_id,
     client_secret,
