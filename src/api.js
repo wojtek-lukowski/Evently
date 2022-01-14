@@ -9,6 +9,7 @@ export const extractLocations = (events) => {
 };
 
 export const checkToken = async (accessToken) => {
+  console.log('cheking token');
   const result = await fetch(
     `https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=${accessToken}`
   )
@@ -19,6 +20,7 @@ export const checkToken = async (accessToken) => {
 };
 
 const removeQuery = () => {
+  console.log('getting url');
   if (window.history.pushState && window.location.pathname) {
     var newurl = window.location.protocol +
     "//" +
@@ -32,6 +34,7 @@ const removeQuery = () => {
 };
 
 const getToken = async (code) => {
+  console.log('getting token');
   const encodeCode = encodeURIComponent(code);
   const { access_token } = await fetch(
     `https://0tq0fabzz1.execute-api.eu-central-1.amazonaws.com/dev/api/token/${encodeCode}`
@@ -40,6 +43,8 @@ const getToken = async (code) => {
     return res.json();
   })
   .catch((error) => error);
+  
+  console.log('token', access_token);
 
   access_token && localStorage.setItem('access_token', access_token);
 
@@ -48,6 +53,8 @@ const getToken = async (code) => {
 
 export const getEvents = async () => {
   NProgress.start();
+
+  console.log('getting events');
 
   if (window.location.href.startsWith('http://localhost')) {
     NProgress.done();
