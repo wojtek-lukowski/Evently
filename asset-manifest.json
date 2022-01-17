@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/evently/static/css/main.a0ff0d6f.chunk.css",
-    "main.js": "/evently/static/js/main.08f50fbb.chunk.js",
-    "main.js.map": "/evently/static/js/main.08f50fbb.chunk.js.map",
+    "main.js": "/evently/static/js/main.9d1152ba.chunk.js",
+    "main.js.map": "/evently/static/js/main.9d1152ba.chunk.js.map",
     "runtime-main.js": "/evently/static/js/runtime-main.aea7a19d.js",
     "runtime-main.js.map": "/evently/static/js/runtime-main.aea7a19d.js.map",
-    "static/js/2.12491ea0.chunk.js": "/evently/static/js/2.12491ea0.chunk.js",
-    "static/js/2.12491ea0.chunk.js.map": "/evently/static/js/2.12491ea0.chunk.js.map",
+    "static/js/2.9ce375e9.chunk.js": "/evently/static/js/2.9ce375e9.chunk.js",
+    "static/js/2.9ce375e9.chunk.js.map": "/evently/static/js/2.9ce375e9.chunk.js.map",
     "static/js/3.f25e821b.chunk.js": "/evently/static/js/3.f25e821b.chunk.js",
     "static/js/3.f25e821b.chunk.js.map": "/evently/static/js/3.f25e821b.chunk.js.map",
     "index.html": "/evently/index.html",
     "service-worker.js": "/evently/service-worker.js",
     "service-worker.js.map": "/evently/service-worker.js.map",
     "static/css/main.a0ff0d6f.chunk.css.map": "/evently/static/css/main.a0ff0d6f.chunk.css.map",
-    "static/js/2.12491ea0.chunk.js.LICENSE.txt": "/evently/static/js/2.12491ea0.chunk.js.LICENSE.txt"
+    "static/js/2.9ce375e9.chunk.js.LICENSE.txt": "/evently/static/js/2.9ce375e9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.aea7a19d.js",
-    "static/js/2.12491ea0.chunk.js",
+    "static/js/2.9ce375e9.chunk.js",
     "static/css/main.a0ff0d6f.chunk.css",
-    "static/js/main.08f50fbb.chunk.js"
+    "static/js/main.9d1152ba.chunk.js"
   ]
 }
