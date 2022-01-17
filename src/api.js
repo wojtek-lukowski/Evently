@@ -9,7 +9,7 @@ export const extractLocations = (events) => {
 };
 
 export const checkToken = async (accessToken) => {
-  console.log('cheking token');
+  console.log('checking token');
   const result = await fetch(
     `https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=${accessToken}`
   )
@@ -71,7 +71,7 @@ export const getEvents = async () => {
 
   if (token) {
     removeQuery();
-    const url = `https://0tq0fabzz1.execute-api.eu-central-1.amazonaws.com/dev/api/get-calendar-events/${token}`;
+    const url = `https://0tq0fabzz1.execute-api.eu-central-1.amazonaws.com/dev/api/get-events/${token}`;
     const result = await axios.get(url);
       if (result.data) {
         var locations = extractLocations(result.data.events);
