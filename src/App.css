@@ -197,7 +197,7 @@ button:hover {
 
 .event-details {
   position: absolute;
-  bottom: 0;
+  top: 100%;
   left: 0;
   background-color: var(--white);
   color: var(--purple-dark);
