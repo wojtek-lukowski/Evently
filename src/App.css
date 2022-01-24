@@ -155,6 +155,7 @@ input:active {
 }
 
 .event {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 30rem;
