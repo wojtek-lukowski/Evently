@@ -11,6 +11,7 @@
   --gap8: calc(var(--gap)*8);
 
   --purple-dark: #350568;
+  --purple-dark: red;
   --purple-shadow: #35056880;
   --purple-light: #5C2986;
   --green: #F19306;
