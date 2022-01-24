@@ -226,6 +226,7 @@ line-height: 120%;
   align-items: center;
   flex-direction: column;
   margin-top: var(--gap5);
+  z-index: 0;
 }
 .data-vis-wrapper .recharts-responsive-container {
   min-width: 100%;
