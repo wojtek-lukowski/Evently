@@ -17,7 +17,7 @@ class App extends Component {
   state = {
     events: [],
     locations: [],
-    numberOfEvents: 30,
+    numberOfEvents: 50,
     currentLocation: 'all',
     showWelcomeScreen: undefined
   }

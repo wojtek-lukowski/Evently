@@ -102,6 +102,7 @@ input:active {
   background-color: white;
   align-self: center;
   margin-top: 0;
+  z-index: 10;
 }
 
 .suggestions {
