@@ -103,9 +103,6 @@ input:active {
   align-self: center;
   margin-top: 0;
   z-index: 10;
-}
-
-.suggestions {
   width: 30rem;
   padding-bottom: var(--gap2);
   border: 1px solid var(--purple-dark);
@@ -117,6 +114,7 @@ input:active {
   background-color: var(--text-color);
   color: var(--purple-dark);
   padding: var(--gap);
+  z-index: 10;
   /* margin: var(--gap); */
 }
 
@@ -125,6 +123,7 @@ input:active {
   color: var(--text-color);
   cursor: pointer;
   transition: 0.2s;
+  z-index: 10;
 }
 
 .NumberOfEvents {
