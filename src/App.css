@@ -202,6 +202,7 @@ button:hover {
   background-color: var(--white);
   color: var(--purple-dark);
   border: 1px solid var(--purple-dark);
+  border-radius: var(--border-radius);
   padding: var(--gap2);
   z-index: 10;
 }
