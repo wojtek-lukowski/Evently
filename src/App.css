@@ -107,8 +107,7 @@ input:active {
   padding-bottom: var(--gap2);
   border: 1px solid var(--purple-dark);
   box-shadow: 2px 5px 10px var(--white-opaque);
-
-  max-height: 100px;
+  max-height: 400px;
   overflow-y: auto;
 }
 
@@ -198,7 +197,7 @@ button:hover {
 
 .event-details {
   position: absolute;
-  bottom: 0;
+  top: 100%;
   left: 0;
   background-color: var(--white);
   color: var(--purple-dark);
