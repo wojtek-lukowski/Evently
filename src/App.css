@@ -192,13 +192,16 @@ button:hover {
   padding-right: 8px;
 }
 
+.event-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--white);
+  color: var(--purple-dark);
+}
+
 .event-description {
 line-height: 120%;
-position: absolute;
-top: 0;
-left: 0;
-background-color: var(--white);
-color: var(--purple-dark);
 }
 
 .Alert {
