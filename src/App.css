@@ -11,7 +11,6 @@
   --gap8: calc(var(--gap)*8);
 
   --purple-dark: #350568;
-  --purple-dark: red;
   --purple-shadow: #35056880;
   --purple-light: #5C2986;
   --green: #F19306;
@@ -195,6 +194,11 @@ button:hover {
 
 .event-description {
 line-height: 120%;
+position: absolute;
+top: 0;
+left: 0;
+background-color: var(--white);
+color: var(--purple-dark);
 }
 
 .Alert {
