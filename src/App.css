@@ -203,6 +203,7 @@ button:hover {
   color: var(--purple-dark);
   border: 1px solid var(--purple-dark);
   padding: var(--gap2);
+  z-index: 10;
 }
 
 .event-description {
