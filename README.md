@@ -1,9 +1,18 @@
 # evently
 
-Evently is a serverless progressive web app bringing to you latest info on events happening on cities aorundf the world.
+Evently is a serverless **progressive web app** fetching the data on the wed-dev events worldwide from the [CareerFoundry](https://careerfoundry.com) calendar. 
+
+It is using the Google API Calendar, OAuth, Serverless and AWS.
+
+The frontend has been built with React (with Create React App).
+
+[The project can be viewed here.](https://wojtek-lukowski.github.io/evently/)
 
 
-SHOW/HIDE AN EVENT'S DETAILS
+
+
+
+<!-- SHOW/HIDE AN EVENT'S DETAILS
 
 User story:
 
@@ -55,4 +64,4 @@ As a visually oriented person, I want my app to show the graphs with data, so th
 Scenario 1: Show a chart with the number of upcoming events in each city
 Given the user selected the city
 When the list of events is displayed
-Then there will be also graphs/charts showing the number of upcoming events
+Then there will be also graphs/charts showing the number of upcoming events -->
