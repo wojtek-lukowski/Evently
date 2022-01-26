@@ -6,7 +6,9 @@ It is using the Google API Calendar, OAuth, Serverless and AWS.
 
 The frontend has been built with React (with Create React App).
 
-[The project can be viewed here.](https://wojtek-lukowski.github.io/evently/)
+The project is awaiting Google verification in order to accessible by everybody. Until then, you can see a short [you tube video](https://www.youtube.com/watch?v=5f6Yiwf22PE) presenting the brief overview.
+
+[The project will be available here.](https://wojtek-lukowski.github.io/evently/)
 
 
 
