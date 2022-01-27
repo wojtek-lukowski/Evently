@@ -103,3 +103,8 @@ export const getAccessToken = async () => {
   }
   return accessToken;
 };
+
+export function disable(){
+  return <button disabled={true}>I am Disabled!</button>
+  }
+  // export default disable
