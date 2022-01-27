@@ -87,6 +87,7 @@ export const getAccessToken = async () => {
   console.log('getting token2');
   const accessToken = localStorage.getItem('access_token');
   const tokenCheck = accessToken && (await checkToken(accessToken));
+  NProgress.start();
 
   if (!accessToken || tokenCheck.error) {
     await localStorage.removeItem('access_token');
@@ -99,7 +100,9 @@ export const getAccessToken = async () => {
       const { authUrl } = results.data;
       return (window.location.href = authUrl);
     }
+    NProgress.stop();
     return code && getToken(code);
   }
+  NProgress.stop();
   return accessToken;
 };
