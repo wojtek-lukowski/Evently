@@ -1,10 +1,5 @@
 import React from "react";
 import './WelcomeScreen.css';
-import disable from './api';
-
-function Disable() {
-  return <button disabled={true}>I am Disabled!</button>
-}
 
 function WelcomeScreen(props) {
   return props.showWelcomeScreen ?
@@ -22,7 +17,7 @@ function WelcomeScreen(props) {
                 alt="Google sign-in"
               />
             </div>
-            <button onClick={() => { props.getAccessToken(); Disable() }}
+            <button onClick={() => { props.getAccessToken() }}
               rel="nofollow noopener"
               class="btn-text"
             >
